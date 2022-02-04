@@ -63,7 +63,6 @@
     <springProfile name="dev">
         <root level="INFO">
             <appender-ref ref="console"/>
-            <appender-ref ref="filelog"/>
         </root>
     </springProfile>
 

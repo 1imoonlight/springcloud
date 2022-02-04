@@ -1,10 +1,10 @@
 package ltd.daydayup.common.aspect;
 
 import lombok.extern.slf4j.Slf4j;
-import ltd.daydayup.codingcommon.BaseResultCodeEnum;
-import ltd.daydayup.codingcommon.exception.ApiException;
-import ltd.daydayup.codingcommon.result.Result;
-import ltd.daydayup.codingcommon.utils.FileSizeUtil;
+import ltd.daydayup.common.BaseResultCodeEnum;
+import ltd.daydayup.common.exception.ApiException;
+import ltd.daydayup.common.result.Result;
+import ltd.daydayup.common.utils.FileSizeUtil;
 import org.apache.tomcat.util.http.fileupload.impl.FileSizeLimitExceededException;
 import org.springframework.validation.BindException;
 import org.springframework.validation.FieldError;

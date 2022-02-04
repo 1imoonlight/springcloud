@@ -1,6 +1,6 @@
 package ltd.daydayup.web.service.config;
 
-import ltd.daydayup.codingweb.interceptor.LoggingInterceptor;
+import ltd.daydayup.web.interceptor.LoggingInterceptor;
 import okhttp3.ConnectionPool;
 import okhttp3.OkHttpClient;
 import org.springframework.context.annotation.Bean;

@@ -1,8 +1,8 @@
 package ltd.daydayup.common.result;
 
 import lombok.Data;
-import ltd.daydayup.codingcommon.BaseResultCodeEnum;
-import ltd.daydayup.codingcommon.EnumBase;
+import ltd.daydayup.common.BaseResultCodeEnum;
+import ltd.daydayup.common.EnumBase;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.Serializable;
