@@ -1,7 +1,5 @@
 package ltd.daydayup.common.enums;
 
-import ltd.daydayup.common.EnumBase;
-
 public enum BaseResultCodeEnum implements EnumBase {
     /** 操作成功 */
     SUCCESS("200", "操作成功"),

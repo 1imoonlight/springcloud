@@ -14,7 +14,6 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 @NacosPropertySource(dataId = "springcloud",autoRefreshed = true)
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 public class springcloudApplication {
-
     public static void main(String[] args) {
         SpringApplication.run(springcloudApplication.class,args);
     }
