@@ -1,6 +1,5 @@
 package ltd.daydayup.common.utils;
 
-
 import java.text.DecimalFormat;
 
 public class FileSizeUtil {

@@ -1,7 +1,7 @@
 package ltd.daydayup.common.aspect;
 
 import lombok.extern.slf4j.Slf4j;
-import ltd.daydayup.common.BaseResultCodeEnum;
+import ltd.daydayup.common.enums.BaseResultCodeEnum;
 import ltd.daydayup.common.exception.ApiException;
 import ltd.daydayup.common.result.Result;
 import ltd.daydayup.common.utils.FileSizeUtil;

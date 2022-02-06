@@ -14,10 +14,11 @@ import java.util.Map;
 
 /**
  *
- * @Author : meixiaohu
- * @create 2021/3/31 10:27
- */
-
+ * @author lipengcheng
+ * @date 2022/2/6 17:34
+ * @param
+ * @return
+ **/
 @Slf4j
 public class OkHttpUtil {
 

@@ -1,6 +1,6 @@
 package ltd.daydayup.common.exception;
 
-import ltd.daydayup.common.EnumBase;
+import ltd.daydayup.common.enums.EnumBase;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
