@@ -20,7 +20,7 @@ import java.util.Map;
  * @return
  **/
 @Slf4j
-public class OkHttpUtil {
+public class OkHttpUtils {
 
     /**
      * 根据map获取get请求参数

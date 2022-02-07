@@ -2,7 +2,7 @@ package ltd.daydayup.common.utils;
 
 import java.text.DecimalFormat;
 
-public class FileSizeUtil {
+public class FileSizeUtils {
 
     /**
      * 定义GB的计算常量

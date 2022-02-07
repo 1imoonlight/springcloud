@@ -14,8 +14,8 @@ import java.util.List;
 
 
 @Slf4j
-public class JsonUtil {
-    private JsonUtil() {
+public class JsonUtils {
+    private JsonUtils() {
     }
 
     /***
@@ -76,7 +76,7 @@ public class JsonUtil {
         if (Strings.isNullOrEmpty(jsonStr)) {
             return null;
         }
-        JSONObject obj = JsonUtil.toBean(jsonStr, JSONObject.class);
+        JSONObject obj = JsonUtils.toBean(jsonStr, JSONObject.class);
         if (obj != null) {
             value = obj.getString(propertyName);
         }

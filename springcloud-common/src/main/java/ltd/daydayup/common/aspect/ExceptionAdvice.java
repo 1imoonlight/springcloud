@@ -4,7 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import ltd.daydayup.common.enums.BaseResultCodeEnum;
 import ltd.daydayup.common.exception.ApiException;
 import ltd.daydayup.common.result.Result;
-import ltd.daydayup.common.utils.FileSizeUtil;
+import ltd.daydayup.common.utils.FileSizeUtils;
 import org.apache.tomcat.util.http.fileupload.impl.FileSizeLimitExceededException;
 import org.springframework.validation.BindException;
 import org.springframework.validation.FieldError;
@@ -100,7 +100,7 @@ public class ExceptionAdvice {
         result.setCode(BaseResultCodeEnum.SYSTEM_FAILURE.getCode());
         if (ex.getCause().getCause() instanceof FileSizeLimitExceededException) {
 
-            result.setMsg("文件上传大小超过限制:" + FileSizeUtil.getSizeString(((FileSizeLimitExceededException) ex.getCause().getCause()).getPermittedSize()));
+            result.setMsg("文件上传大小超过限制:" + FileSizeUtils.getSizeString(((FileSizeLimitExceededException) ex.getCause().getCause()).getPermittedSize()));
         }
         return result;
     }
