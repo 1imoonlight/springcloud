@@ -16,8 +16,6 @@ import java.util.Map;
  *
  * @author lipengcheng
  * @date 2022/2/6 17:34
- * @param
- * @return
  **/
 @Slf4j
 public class OkHttpUtils {

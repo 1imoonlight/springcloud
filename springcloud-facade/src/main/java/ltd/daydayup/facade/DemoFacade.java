@@ -13,6 +13,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/api/demo")
 public interface DemoFacade {
 
+    /**
+     * 获取nacos的配置的具体值
+     * @author lipengcheng
+     * @date 2022/2/9 09:40
+     * @return ltd.daydayup.common.result.Result<java.lang.String>
+     */
     @GetMapping("/querynacosvalue")
     Result<String> queryNacosValue();
 }

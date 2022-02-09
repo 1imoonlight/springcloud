@@ -3,6 +3,11 @@ package ltd.daydayup.common.exception;
 
 import lombok.Data;
 
+/**
+ *
+ * @author lipengcheng
+ * @date 2022/2/9 09:43
+ */
 @Data
 public class ApiException extends RuntimeException {
 

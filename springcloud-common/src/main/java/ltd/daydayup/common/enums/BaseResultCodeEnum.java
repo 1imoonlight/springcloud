@@ -1,5 +1,9 @@
 package ltd.daydayup.common.enums;
 
+/**
+ * @author lipengcheng
+ * @date 2022/2/9 09:43
+ */
 public enum BaseResultCodeEnum implements EnumBase {
     /** 操作成功 */
     SUCCESS("200", "操作成功"),

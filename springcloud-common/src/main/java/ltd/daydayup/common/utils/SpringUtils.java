@@ -12,6 +12,10 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Locale;
 import java.util.Map;
 
+/**
+ * @author lipengcheng
+ * @date 2022/2/9 09:44
+ */
 @Component
 @Slf4j
 public class SpringUtils implements ApplicationContextAware {

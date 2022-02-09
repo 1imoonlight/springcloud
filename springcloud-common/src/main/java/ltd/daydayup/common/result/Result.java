@@ -7,6 +7,10 @@ import org.apache.commons.lang3.StringUtils;
 
 import java.io.Serializable;
 
+/**
+ * @author lipengcheng
+ * @date 2022/2/9 09:43
+ */
 @Data
 public class Result<T> implements Serializable {
 

@@ -2,6 +2,10 @@ package ltd.daydayup.common.utils;
 
 import java.text.DecimalFormat;
 
+/**
+ * @author lipengcheng
+ * @date 2022/2/9 09:44
+ */
 public class FileSizeUtils {
 
     /**
