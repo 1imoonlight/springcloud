@@ -1,6 +1,7 @@
 package ltd.daydayup.facade;
 
 import ltd.daydayup.common.result.Result;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @date 2022/2/6 18:17
  */
 @RequestMapping("/api/demo")
+@Validated
 public interface DemoFacade {
 
     /**
