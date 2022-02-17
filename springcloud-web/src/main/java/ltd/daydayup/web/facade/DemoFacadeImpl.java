@@ -1,4 +1,4 @@
-package ltd.daydayup.web.service.biz;
+package ltd.daydayup.web.facade;
 
 import com.alibaba.nacos.api.config.annotation.NacosValue;
 import lombok.extern.slf4j.Slf4j;
