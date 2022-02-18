@@ -28,4 +28,13 @@ public class DemoFacadeImpl implements DemoFacade {
             return Result.buildErrorResult(BaseResultCodeEnum.SYSTEM_ERROR.getMsg());
         }
     }
+
+    @Override
+    public Result<String> querySentinel() {
+        try{
+            return Result.buildSuccessResult(demo);
+        }catch (Exception e){
+            return Result.buildErrorResult(BaseResultCodeEnum.SYSTEM_ERROR.getMsg());
+        }
+    }
 }

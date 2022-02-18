@@ -1,5 +1,6 @@
 package ltd.daydayup.facade;
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import ltd.daydayup.common.result.Result;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,4 +24,8 @@ public interface DemoFacade {
      */
     @GetMapping("/querynacosvalue")
     Result<String> queryNacosValue();
+
+    @GetMapping("/sentinel")
+    @SentinelResource("sentinel")
+    Result<String> querySentinel();
 }
