@@ -25,6 +25,12 @@ public interface DemoFacade {
     @GetMapping("/querynacosvalue")
     Result<String> queryNacosValue();
 
+    /**
+     * sentinel限流
+     * @author lipengcheng
+     * @date 2022/2/19 21:57
+     * @return ltd.daydayup.common.result.Result<java.lang.String>
+     **/
     @GetMapping("/sentinel")
     @SentinelResource("sentinel")
     Result<String> querySentinel();
