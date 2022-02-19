@@ -20,8 +20,10 @@ public class LoggingInterceptor implements Interceptor {
 
         long t2 = System.nanoTime();
         String resBodyStr = getResponsBody(response);
-        log.info(String.format("响应 :url-> %s %n contentType->%s,lenght->%s,status->%s %n 耗时 %.1fms%n headers->%s %n body->%s %n ",
-                response.request().url(), response.body().contentType(), response.body().contentLength(), response.code(), (t2 - t1) / 1e6d, response.headers(), resBodyStr));
+        assert response.body() != null;
+        log.info(String.format("响应 :url-> %s %n contentType->%s,length->%s,status->%s %n 耗时 %.1fms%n headers->%s %n body->%s %n ",
+                response.request().url(), response.body().contentType(), response.body().contentLength(), response.code(),
+                (t2 - t1) / 1e6d, response.headers(), resBodyStr));
         return response;
     }
 
@@ -40,7 +42,7 @@ public class LoggingInterceptor implements Interceptor {
             Charset charset = StandardCharsets.UTF_8;
             requestContent = buffer.readString(charset);
         } catch (IOException e) {
-            log.error("okhttp3 logRequest error >> ex = {}", e);
+            log.error("okhttp3 logRequest error >> ex = {0}", e);
         }
         return requestContent;
     }
@@ -48,11 +50,13 @@ public class LoggingInterceptor implements Interceptor {
     private String getResponsBody(Response response) {
         String resBodyStr = "";
         try {
+            assert response.body() != null;
             MediaType mt = response.body().contentType();
             Charset charset = mt != null && mt.charset() != null ? mt.charset() : StandardCharsets.UTF_8;
             BufferedSource source = response.body().source();
             source.request(Long.MAX_VALUE);
             Buffer buffer = source.getBuffer();
+            assert charset != null;
             resBodyStr = buffer.clone().readString(charset);
         } catch (Exception e) {
             log.error("okhttp3 logResponse error >> ex = {0}", e);

@@ -27,22 +27,20 @@ public class RedisConfig {
     /**
      * 配置lettuce连接池
      *
-     * @return
      */
     @Bean
     @ConfigurationProperties(prefix = "spring.redis.lettuce.pool")
-    public GenericObjectPoolConfig redisPool() {
+    public GenericObjectPoolConfig<Object> redisPool() {
         return new GenericObjectPoolConfig<>();
     }
 
     /**
      * 配置第一个数据源的
      *
-     * @return
      */
     @Bean
     @ConfigurationProperties(prefix = "spring.redis")
-    public RedisStandaloneConfiguration redisConfig1() {
+    public RedisStandaloneConfiguration redisConfig() {
         return new RedisStandaloneConfiguration();
     }
 
@@ -51,14 +49,14 @@ public class RedisConfig {
      * 这里注意：需要添加@Primary 指定bean的名称，目的是为了创建两个不同名称的LettuceConnectionFactory
      *
      * @param config
-     * @param redisConfig1
+     * @param redisConfig
      * @return
      */
     @Bean("factory")
     @Primary
-    public LettuceConnectionFactory factory(GenericObjectPoolConfig config, RedisStandaloneConfiguration redisConfig1) {
+    public LettuceConnectionFactory factory(GenericObjectPoolConfig config, RedisStandaloneConfiguration redisConfig) {
         LettuceClientConfiguration clientConfiguration = LettucePoolingClientConfiguration.builder().poolConfig(config).build();
-        return new LettuceConnectionFactory(redisConfig1, clientConfiguration);
+        return new LettuceConnectionFactory(redisConfig, clientConfiguration);
     }
 
     /**
@@ -86,9 +84,6 @@ public class RedisConfig {
         template.setConnectionFactory(factory);
         // 使用fastjson序列化
         FastJsonRedisSerializer<Object> redisSerialize = new FastJsonRedisSerializer<>(Object.class);
-        // 全局开启AutoType，不建议使用
-        // ParserConfig.getGlobalInstance().setAutoTypeSupport(true);
-        // 建议使用这种方式，小范围指定白名单
         ParserConfig.getGlobalInstance().addAccept("ltd.daydayup.web.repository.dao.entity.");
         // value 值的序列化采用 RedisSerialize
         template.setValueSerializer(redisSerialize);
