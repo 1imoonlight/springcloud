@@ -40,7 +40,7 @@ public class RedisConfig {
      */
     @Bean
     @ConfigurationProperties(prefix = "spring.redis")
-    public RedisStandaloneConfiguration redisConfig() {
+    public RedisStandaloneConfiguration redisConfig1() {
         return new RedisStandaloneConfiguration();
     }
 
@@ -49,14 +49,14 @@ public class RedisConfig {
      * 这里注意：需要添加@Primary 指定bean的名称，目的是为了创建两个不同名称的LettuceConnectionFactory
      *
      * @param config
-     * @param redisConfig
+     * @param redisConfig1
      * @return
      */
     @Bean("factory")
     @Primary
-    public LettuceConnectionFactory factory(GenericObjectPoolConfig config, RedisStandaloneConfiguration redisConfig) {
+    public LettuceConnectionFactory factory(GenericObjectPoolConfig config, RedisStandaloneConfiguration redisConfig1) {
         LettuceClientConfiguration clientConfiguration = LettucePoolingClientConfiguration.builder().poolConfig(config).build();
-        return new LettuceConnectionFactory(redisConfig, clientConfiguration);
+        return new LettuceConnectionFactory(redisConfig1, clientConfiguration);
     }
 
     /**
