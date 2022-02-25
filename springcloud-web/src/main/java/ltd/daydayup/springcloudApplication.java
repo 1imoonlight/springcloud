@@ -1,4 +1,4 @@
-package ltd.daydayup.web;
+package ltd.daydayup;
 
 import com.alibaba.nacos.spring.context.annotation.config.NacosPropertySource;
 import org.springframework.boot.SpringApplication;
@@ -15,7 +15,6 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 public class springcloudApplication {
     public static void main(String[] args) {
-        System.setProperty("nacos.logging.default.config.enabled", "false");
         SpringApplication.run(springcloudApplication.class, args);
     }
 }

@@ -52,15 +52,18 @@ public class DemoFacadeImpl implements DemoFacade {
 
     @Override
     public Result<String> createLockDemo(String uid) {
+        log.info("请求进入");
         String lockKey = MessageFormat.format(RedisConstants.REDISKEY_DEMO_LOCKKEY, uid);
         try {
             if (redissonDistributionLock.tryLock(lockKey, TimeUnit.SECONDS, 10, 10)) {
-                return Result.buildSuccessResult();
+                return Result.buildSuccessResult(demo);
             }
             return Result.buildErrorResult(BaseResultCodeEnum.REPETITIVE_OPERATION.code(), BaseResultCodeEnum.REPETITIVE_OPERATION.getMsg());
         } catch (Exception e) {
             log.error("createLockDemo error:" + e.toString());
             return Result.buildErrorResult(e.getMessage());
+        } finally {
+            redissonDistributionLock.unlock(lockKey);
         }
     }
 }
