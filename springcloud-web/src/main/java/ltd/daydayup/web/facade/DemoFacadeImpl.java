@@ -32,6 +32,13 @@ public class DemoFacadeImpl implements DemoFacade {
     @Resource
     private RedissonDistributionLock redissonDistributionLock;
 
+    /**
+     * 获取nacos的配置的具体值
+     *
+     * @return ltd.daydayup.common.result.Result<java.lang.String>
+     * @author lipengcheng
+     * @date 2022/2/9 09:40
+     */
     @Override
     public Result<String> queryNacosValue() {
         try {
@@ -41,6 +48,13 @@ public class DemoFacadeImpl implements DemoFacade {
         }
     }
 
+    /**
+     * sentinel限流
+     *
+     * @return ltd.daydayup.common.result.Result<java.lang.String>
+     * @author lipengcheng
+     * @date 2022/2/19 21:57
+     **/
     @Override
     public Result<String> querySentinel() {
         try {
@@ -50,9 +64,15 @@ public class DemoFacadeImpl implements DemoFacade {
         }
     }
 
+    /**
+     * 分布式锁
+     *
+     * @return ltd.daydayup.common.result.Result<java.lang.String>
+     * @author lipengcheng
+     * @date 2022/2/24 16:34
+     */
     @Override
     public Result<String> createLockDemo(String uid) {
-        log.info("请求进入");
         String lockKey = MessageFormat.format(RedisConstants.REDISKEY_DEMO_LOCKKEY, uid);
         try {
             if (redissonDistributionLock.tryLock(lockKey, TimeUnit.SECONDS, 10, 10)) {

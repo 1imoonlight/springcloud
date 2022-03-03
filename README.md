@@ -1,4 +1,4 @@
-# springcloud基础框架集成
+# SpringCloud基础框架集成
 > https://spring-cloud-alibaba-group.github.io/github-pages/hoxton/zh-cn/index.html
 1. 服务限流降级：支持 WebServlet、WebFlux, OpenFeign、RestTemplate、Dubbo 限流降级功能的接入，可以在运行时通过控制台实时修改限流降级规则，还支持查看限流降级 Metrics 监控。(使用sentinel)
 2. 分布式配置管理：支持分布式系统中的外部化配置，配置更改时自动刷新。（使用nacos）

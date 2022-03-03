@@ -1,5 +1,8 @@
 package ltd.daydayup.web.controller;
 
+import cn.hutool.core.convert.Convert;
+import cn.hutool.core.util.IdUtil;
+import cn.hutool.core.util.RandomUtil;
 import com.alibaba.nacos.api.config.annotation.NacosValue;
 import lombok.extern.slf4j.Slf4j;
 import ltd.daydayup.web.service.biz.redis.RedisService;
@@ -8,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,7 +41,15 @@ public class DemoController {
     @RequestMapping("/redis")
     @ResponseBody
     public String redis() {
-        redisService.set("name", demo);
-        return (String) redisService.get("name");
+        int i = 0;
+        int maxVal = 1000;
+        while (i < maxVal) {
+            String redisKey = IdUtil.simpleUUID();
+            Long randomInt = Convert.toLong(RandomUtil.randomInt(10, 100));
+            redisService.set(redisKey, demo, randomInt);
+            log.info(MessageFormat.format("key:{0} , expire:{1}", redisKey, randomInt));
+            i++;
+        }
+        return demo;
     }
 }
