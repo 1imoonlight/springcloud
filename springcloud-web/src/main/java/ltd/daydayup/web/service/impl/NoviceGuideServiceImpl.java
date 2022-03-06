@@ -1,8 +1,8 @@
-package ltd.daydayup.web.service.biz.impl;
+package ltd.daydayup.web.service.impl;
 
 import ltd.daydayup.web.repository.entity.NoviceGuideUserInfoDO;
 import ltd.daydayup.web.repository.mapper.springcloud.NoviceGuideUserInfoMapper;
-import ltd.daydayup.web.service.biz.NoviceGuideService;
+import ltd.daydayup.web.service.NoviceGuideService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

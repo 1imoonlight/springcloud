@@ -1,4 +1,4 @@
-package ltd.daydayup.web.service.config;
+package ltd.daydayup.web.config;
 
 import com.alibaba.fastjson.parser.ParserConfig;
 import com.alibaba.fastjson.support.spring.FastJsonRedisSerializer;

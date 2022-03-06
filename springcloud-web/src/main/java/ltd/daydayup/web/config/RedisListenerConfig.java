@@ -1,4 +1,4 @@
-package ltd.daydayup.web.service.config;
+package ltd.daydayup.web.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

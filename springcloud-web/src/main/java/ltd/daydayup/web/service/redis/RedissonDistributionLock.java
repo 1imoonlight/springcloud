@@ -1,4 +1,4 @@
-package ltd.daydayup.web.service.biz.redis;
+package ltd.daydayup.web.service.redis;
 
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;

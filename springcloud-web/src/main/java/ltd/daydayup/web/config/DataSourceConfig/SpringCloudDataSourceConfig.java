@@ -1,4 +1,4 @@
-package ltd.daydayup.web.service.config.DataSourceConfig;
+package ltd.daydayup.web.config.DataSourceConfig;
 
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;

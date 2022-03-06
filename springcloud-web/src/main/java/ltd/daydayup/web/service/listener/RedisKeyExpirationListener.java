@@ -1,4 +1,4 @@
-package ltd.daydayup.web.service.biz.listener;
+package ltd.daydayup.web.service.listener;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Qualifier;

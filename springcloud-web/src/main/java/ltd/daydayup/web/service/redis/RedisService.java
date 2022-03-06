@@ -1,4 +1,4 @@
-package ltd.daydayup.web.service.biz.redis;
+package ltd.daydayup.web.service.redis;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;

@@ -9,8 +9,8 @@ import ltd.daydayup.common.enums.BaseResultCodeEnum;
 import ltd.daydayup.common.result.Result;
 import ltd.daydayup.facade.DemoFacade;
 import ltd.daydayup.web.repository.entity.NoviceGuideUserInfoDO;
-import ltd.daydayup.web.service.biz.NoviceGuideService;
-import ltd.daydayup.web.service.biz.redis.RedissonDistributionLock;
+import ltd.daydayup.web.service.NoviceGuideService;
+import ltd.daydayup.web.service.redis.RedissonDistributionLock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 

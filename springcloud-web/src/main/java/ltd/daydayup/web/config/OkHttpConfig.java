@@ -1,4 +1,4 @@
-package ltd.daydayup.web.service.config;
+package ltd.daydayup.web.config;
 
 import ltd.daydayup.web.interceptor.LoggingInterceptor;
 import okhttp3.ConnectionPool;

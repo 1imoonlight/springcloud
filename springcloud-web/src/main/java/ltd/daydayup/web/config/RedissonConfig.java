@@ -1,4 +1,4 @@
-package ltd.daydayup.web.service.config;
+package ltd.daydayup.web.config;
 
 import org.redisson.Redisson;
 import org.redisson.api.RedissonClient;

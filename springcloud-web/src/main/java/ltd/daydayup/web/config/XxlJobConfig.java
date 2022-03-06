@@ -1,4 +1,4 @@
-package ltd.daydayup.web.service.config;
+package ltd.daydayup.web.config;
 
 import com.xxl.job.core.executor.impl.XxlJobSpringExecutor;
 import org.slf4j.Logger;

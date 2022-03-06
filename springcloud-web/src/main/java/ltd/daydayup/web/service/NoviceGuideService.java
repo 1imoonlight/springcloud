@@ -1,4 +1,4 @@
-package ltd.daydayup.web.service.biz;
+package ltd.daydayup.web.service;
 
 import ltd.daydayup.web.repository.entity.NoviceGuideUserInfoDO;
 
