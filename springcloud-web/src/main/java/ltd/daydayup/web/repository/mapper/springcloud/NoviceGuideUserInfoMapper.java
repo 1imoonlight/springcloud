@@ -1,4 +1,5 @@
 package ltd.daydayup.web.repository.mapper.springcloud;
+import org.apache.ibatis.annotations.Param;
 import java.util.List;
 import ltd.daydayup.web.repository.entity.NoviceGuideUserInfoDO;
 

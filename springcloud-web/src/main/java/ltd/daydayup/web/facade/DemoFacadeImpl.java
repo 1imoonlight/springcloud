@@ -108,6 +108,7 @@ public class DemoFacadeImpl implements DemoFacade {
     @Override
     public Result<Object> queryToPage(Integer pageindex, Integer pagesize) {
         try {
+            //设置开始页码及每页数量
             PageHelper.startPage(pageindex, pagesize);
             List<NoviceGuideUserInfoDO> noviceGuideUserInfoDOS = noviceGuideService.queryAll();
             PageInfo<NoviceGuideUserInfoDO> pageInfo = new PageInfo<>(noviceGuideUserInfoDOS);
